@@ -16,11 +16,11 @@ pantalla.grid(row=0, column=0, columnspan=60, padx=1, pady=1)
 def ValorEntrada(boton):
     pantalla.insert(INSERT,boton)
 
-#   Realizar la operación clickeada
+#   Realizar la operación ingresada
 def Resultado():
-    respuesta=eval(pantalla.get())
-    pantalla.delete(0,END)
-    pantalla.insert(0,respuesta)
+    respuesta=eval(pantalla.get()) # Evalúa la expresión ingresada en pantalla (ingresa un String y devuelve un Float)
+    pantalla.delete(0,END) # Borra los datos que habían en pantalla
+    pantalla.insert(0,respuesta) # Inserta el resultado de la operación en pantalla
 
 # Configuración botones
 boton_1 = Button(root, text="1", width=9, height=3, bg="white", fg="red", borderwidth=0, cursor="hand2", command=lambda:ValorEntrada(1)).grid(row=1, column=0, padx=1, pady=1)
